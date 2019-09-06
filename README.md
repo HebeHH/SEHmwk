@@ -6,7 +6,7 @@ This is the codebase for my YSC3232 Software Engineering homework, in Java.
 
 ## Contents
 
-### Week 3: A quiz
+### Week 4: A quiz
 
 The project for this week was to make "a series of objects that can be reused to store a student examination". I did this in two parts. First off, there is the 'Quiz' class. This can be set up to contain any number of 'Question' objects, providing a template for the exam. Secondly, a Quiz object can be used to initialize the 'AnswerBooklet' class. One AnswerBooklet represents a single student's attempt at the exam, and the subsequent grading thereof. It has an 'Answer' object for each 'Question' object in the template quiz, which contains the additional information of the students answer and grade.
 
