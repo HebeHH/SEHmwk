@@ -1,0 +1,34 @@
+<Quiz  points='7'>
+<MCQ  points='1'>
+ <Query>This course is taught in:</Query>
+ <Solution>Java</Solution>
+ <Option>Java</Option>
+ <Option>Python</Option>
+ <Option>C</Option>
+</MCQ>
+<MCQ  points='1'>
+ <Query>There is no iteration in:</Query>
+ <Solution>Waterfall</Solution>
+ <Option>Scrum</Option>
+ <Option>Waterfall</Option>
+ <Option>XP</Option>
+</MCQ>
+<ShortAnswer  points='1'>
+ <Query>The course code is:</Query>
+ <Solution>YSC3232</Solution>
+</ShortAnswer>
+<ShortAnswer  points='1'>
+ <Query>Our current class project is a:</Query>
+ <Solution>Planner</Solution>
+</ShortAnswer>
+<ShortAnswer  points='1'>
+ <Query>The Prof is:</Query>
+ <Solution>Bruno Bodin</Solution>
+</ShortAnswer>
+<LongAnswer  points='1'>
+ <Query>What is Software Engineering?</Query>
+</LongAnswer>
+<LongAnswer  points='1'>
+ <Query>What process do you use in personal projects?</Query>
+</LongAnswer>
+</Quiz>
