@@ -61,47 +61,4 @@ public class Runnable {
 
 		return newxml.equals(myxml);
 	}
-
-	// Make a quiz and run tests
-	public static void main(String [ ] args)  throws ParserConfigurationException, SAXException, IOException {
-
-		// Setup a quiz
-		Quiz q = new Quiz();
-
-		MCQ m1 = new MCQ("This course is taught in:");
-		m1.addSolution("Java");
-		m1.addOption("Python");
-		m1.addOption("C");
-		MCQ m2 = new MCQ("There is no iteration in:");
-		m2.addOption("Scrum");
-		m2.addSolution("Waterfall");
-		m2.addOption("XP");
-
-		
-		ShortAnswer s1 = new ShortAnswer("The course code is:");
-		s1.addSolution("YSC3232");
-		ShortAnswer s2 = new ShortAnswer("Our current class project is a:");
-		s2.addSolution("Planner");
-		ShortAnswer s3 = new ShortAnswer("The Prof is:");
-		s3.addSolution("Bruno Bodin");
-
-		LongAnswer l1 = new LongAnswer("What is Software Engineering?");
-		
-		q.addQuestion(m1);
-		q.addQuestion(m2);
-		q.addQuestion(s1);
-		q.addQuestion(s2);
-		q.addQuestion(s3);
-		q.addQuestion(l1);
-
-		String myxml = q.getXML();
-		writeXML("QuizTemplates/IntroQuiz.xml", myxml);
-
-		// Setup an answer booklet
-		AnswerBooklet john = new AnswerBooklet(q, "John Doe");
-
-		// TESTS
-		Boolean quiz_xml_works = testXMLConsistency(q);
-		Boolean answer_xml_works = testXMLConsistency(john);
-	}
 }

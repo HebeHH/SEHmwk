@@ -59,7 +59,7 @@ public class AnswerBooklet {
 		for (Answer a: this.answers) {
 			a.ask(input);
 		}
-		input.close();
+		// input.close();
 	}
 
 	// Grade all questions that can be done automatically
@@ -97,9 +97,13 @@ public class AnswerBooklet {
 		}
 	}
 
-	// Returns current grade of student
-	public Double currentGrade() {
-		return this.total_marks;
+	// Returns current grade of student as a percentage
+	public int currentGrade() {
+		if (this.total_marks == 0.0) {
+			return 0;
+		}
+		Double current_grade = (this.student_marks / this.total_marks * 100);
+		return current_grade.intValue();
 	}
 
 	public String toString() {

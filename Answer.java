@@ -61,7 +61,7 @@ public class Answer  {
 
 		while (!input.hasNext()) {}
 
-		this.response = input.next();
+		this.response = input.nextLine();
 		this.status = Status.ANSWERED;
 	}
 

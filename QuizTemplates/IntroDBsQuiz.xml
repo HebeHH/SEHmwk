@@ -1,4 +1,4 @@
-<Quiz  points='6'>
+<Quiz  total_marks='6'>
 <MCQ  points='1'>
  <Query>What type of database is Postgres?</Query>
  <Solution>Relational</Solution>

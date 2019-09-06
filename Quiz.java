@@ -17,8 +17,9 @@ public class Quiz extends XMLizable {
 
 	// Build quiz, including all questions, from it's XML representation
 	public Quiz(Element e) {
-		this.total_marks = 0;
-		
+
+		this.total_marks = Integer.valueOf(e.getAttribute("total_marks"));
+
 		NodeList mcqs = e.getElementsByTagName("MCQ");
 		for (int i = 0; i < mcqs.getLength(); i++) {
 			MCQ q = new MCQ( (Element) mcqs.item(i));
@@ -55,7 +56,7 @@ public class Quiz extends XMLizable {
 
 	// Return XML representation of entire quiz
 	public String getXML() {
-		String xml = "<Quiz  points='" + Integer.toString(this.total_marks) +"'>\n";
+		String xml = "<Quiz  total_marks='" + Integer.toString(this.total_marks) +"'>\n";
 		for (Question q : this.questions ) {
 			xml += q.getXML();
 		}

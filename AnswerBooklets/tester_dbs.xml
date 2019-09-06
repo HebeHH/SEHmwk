@@ -1,10 +1,18 @@
-<Quiz  points='6'>
+<AnswerBooklet student='Testing Booklet' total_marks='6.0'  student_marks='5.0' ungraded_marks='0.0'>
+<Student>Testing Booklet</Student>
+<Answer  status='GRADED'>
+<Response>relational</Response>
+<Grade>1.0</Grade>
 <MCQ  points='1'>
  <Query>What type of database is Postgres?</Query>
  <Solution>Relational</Solution>
  <Option>NoSQL</Option>
  <Option>Relational</Option>
 </MCQ>
+</Answer>
+<Answer  status='GRADED'>
+<Response>insert</Response>
+<Grade>1.0</Grade>
 <MCQ  points='1'>
  <Query>The classic call to add something to a SQL database is:</Query>
  <Solution>INSERT</Solution>
@@ -12,6 +20,10 @@
  <Option>PUT</Option>
  <Option>INSERT</Option>
 </MCQ>
+</Answer>
+<Answer  status='GRADED'>
+<Response>from</Response>
+<Grade>1.0</Grade>
 <MCQ  points='1'>
  <Query>SELECT name ?????? students;</Query>
  <Solution>FROM</Solution>
@@ -19,16 +31,29 @@
  <Option>AND</Option>
  <Option>FROM</Option>
 </MCQ>
+</Answer>
+<Answer  status='GRADED'>
+<Response>*</Response>
+<Grade>1.0</Grade>
 <ShortAnswer  points='1'>
  <Query>What character selects all columns?</Query>
  <Solution>*</Solution>
 </ShortAnswer>
+</Answer>
+<Answer  status='GRADED'>
+<Response>from</Response>
+<Grade>0.0</Grade>
 <ShortAnswer  points='1'>
  <Query>We only want unique values; use SELECT ??????</Query>
  <Solution>DISTINCT</Solution>
 </ShortAnswer>
+</Answer>
+<Answer  status='GRADED'>
+<Response>count</Response>
+<Grade>1.0</Grade>
 <ShortAnswer  points='1'>
  <Query>I want to know how many records are in the database, which aggregation function should I use?</Query>
  <Solution>COUNT</Solution>
 </ShortAnswer>
-</Quiz>
+</Answer>
+</AnswerBooklet>

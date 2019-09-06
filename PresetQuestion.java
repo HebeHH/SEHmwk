@@ -11,12 +11,12 @@ public abstract class PresetQuestion extends Question {
 	public abstract void addSolution(String sol);
 
 	// Automatically verify whether a string answer matches the 
-	// stored solution
+	// stored solution. Ignore case.
 	public Optional<Double> verifyAnswer(String ans) {
 		if (this.solution == null) {
 			return Optional.empty();
 		}
-		else if (ans == this.solution) {
+		else if (ans.toLowerCase().equals(this.solution.toLowerCase())) {
 			return Optional.of(1.0);
 		} else { 
 			return Optional.of(0.0); 
