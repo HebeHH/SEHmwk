@@ -7,7 +7,6 @@ import javax.xml.parsers.*;
 import java.io.*;
 
 public class ShortAnswer extends PresetQuestion {
-	public static Kind kind = Kind.SHORT;
 
 	// Initialize ShortAnswer with the question and (possibly) points
 	public ShortAnswer(String q, int p) {

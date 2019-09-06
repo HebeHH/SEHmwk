@@ -1,4 +1,7 @@
-<Quiz  points='6'>
+<AnswerBooklet student='John Doe' total_marks='6.0'  student_marks='0.0' ungraded_marks='6.0'>
+<Student>John Doe</Student>
+<Answer  status='CREATED'>
+<Grade>0.0</Grade>
 <MCQ  points='1'>
  <Query>This course is taught in:</Query>
  <Solution>Java</Solution>
@@ -6,6 +9,9 @@
  <Option>Python</Option>
  <Option>C</Option>
 </MCQ>
+</Answer>
+<Answer  status='CREATED'>
+<Grade>0.0</Grade>
 <MCQ  points='1'>
  <Query>There is no iteration in:</Query>
  <Solution>Waterfall</Solution>
@@ -13,19 +19,32 @@
  <Option>Waterfall</Option>
  <Option>XP</Option>
 </MCQ>
+</Answer>
+<Answer  status='CREATED'>
+<Grade>0.0</Grade>
 <ShortAnswer  points='1'>
  <Query>The course code is:</Query>
  <Solution>YSC3232</Solution>
 </ShortAnswer>
+</Answer>
+<Answer  status='CREATED'>
+<Grade>0.0</Grade>
 <ShortAnswer  points='1'>
  <Query>Our current class project is a:</Query>
  <Solution>Planner</Solution>
 </ShortAnswer>
+</Answer>
+<Answer  status='CREATED'>
+<Grade>0.0</Grade>
 <ShortAnswer  points='1'>
  <Query>The Prof is:</Query>
  <Solution>Bruno Bodin</Solution>
 </ShortAnswer>
+</Answer>
+<Answer  status='CREATED'>
+<Grade>0.0</Grade>
 <LongAnswer  points='1'>
  <Query>What is Software Engineering?</Query>
 </LongAnswer>
-</Quiz>
+</Answer>
+</AnswerBooklet>

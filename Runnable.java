@@ -16,7 +16,6 @@ public class Runnable {
           } catch (Exception e) { System.out.println(e); }   
 	}
 
-
 	// Reads an XML file and returns the root element
 	public static Element readXML(String filename)  throws ParserConfigurationException, SAXException, IOException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -46,8 +45,8 @@ public class Runnable {
 	// into XML, reading it back, then writing it to XML again and testing for consistency.
 	public static Boolean testXMLConsistency(Quiz q)  throws ParserConfigurationException, SAXException, IOException {
 		String myxml = q.getXML();
-		writeXML("Q1.xml", myxml);
-		String newxml = readQuizXML("Q1.xml").getXML();
+		writeXML("QuizTemplates/Q1.xml", myxml);
+		String newxml = readQuizXML("QuizTemplates/Q1.xml").getXML();
 
 		return newxml.equals(myxml);
 	}
@@ -57,14 +56,16 @@ public class Runnable {
 	// into XML, reading it back, then writing it to XML again and testing for consistency.
 	public static Boolean testXMLConsistency(AnswerBooklet a)  throws ParserConfigurationException, SAXException, IOException {
 		String myxml = a.getXML();
-		writeXML("A1.xml", myxml);
-		String newxml = readABXML("A1.xml").getXML();
+		writeXML("AnswerBooklets/A1.xml", myxml);
+		String newxml = readABXML("AnswerBooklets/A1.xml").getXML();
 
 		return newxml.equals(myxml);
 	}
 
 	// Make a quiz and run tests
 	public static void main(String [ ] args)  throws ParserConfigurationException, SAXException, IOException {
+
+		// Setup a quiz
 		Quiz q = new Quiz();
 
 		MCQ m1 = new MCQ("This course is taught in:");
@@ -84,9 +85,7 @@ public class Runnable {
 		ShortAnswer s3 = new ShortAnswer("The Prof is:");
 		s3.addSolution("Bruno Bodin");
 
-
 		LongAnswer l1 = new LongAnswer("What is Software Engineering?");
-		LongAnswer l2 = new LongAnswer("What process do you use in personal projects?");
 		
 		q.addQuestion(m1);
 		q.addQuestion(m2);
@@ -94,21 +93,15 @@ public class Runnable {
 		q.addQuestion(s2);
 		q.addQuestion(s3);
 		q.addQuestion(l1);
-		q.addQuestion(l2);
 
+		String myxml = q.getXML();
+		writeXML("QuizTemplates/IntroQuiz.xml", myxml);
+
+		// Setup an answer booklet
 		AnswerBooklet john = new AnswerBooklet(q, "John Doe");
-		john.giveQuiz();
-		writeXML("JohnAnswers.xml", john.getXML());
-
 
 		// TESTS
-		testXMLConsistency(q);
-		testXMLConsistency(john);
-		if (testXMLConsistency(john)) {
-			System.out.println("hi");
-		}
-
-
-
+		Boolean quiz_xml_works = testXMLConsistency(q);
+		Boolean answer_xml_works = testXMLConsistency(john);
 	}
 }
